@@ -10,8 +10,9 @@ export default function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name='Home' component={AboutScreen} />
-        <Stack.Screen name='EditNote' component={NoteEditorScreen} />
+        <Stack.Screen name='Home' component={FirstScreen} />
+        <Stack.Screen name='Note' component={NoteEditorScreen} />
+        <Stack.Screen name='About' component={AboutScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
