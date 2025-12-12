@@ -1,10 +1,17 @@
-import { View, Image, StyleSheet, Dimensions } from 'react-native';
+import {
+  View,
+  Image,
+  StyleSheet,
+  Dimensions,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import TipOfTheDay from '../TipOfTheDay';
 import React from 'react';
 
 const { width, height } = Dimensions.get('window');
 
-export default function FirstScreen() {
+export default function FirstScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -14,6 +21,21 @@ export default function FirstScreen() {
       />
       <View style={styles.overlay}>
         <TipOfTheDay />
+      </View>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('About')}
+        >
+          <Text style={styles.buttonText}>Go to About</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Note')}
+        >
+          <Text style={styles.buttonText}>Go to Note</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -33,5 +55,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    paddingHorizontal: 20,
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+  },
+  button: {
+    flex: 1,
+    marginHorizontal: 5,
+    backgroundColor: 'rgba(167, 167, 167, 0.7)',
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
