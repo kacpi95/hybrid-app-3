@@ -1,3 +1,9 @@
+import { Text, View } from 'react-native';
+
 export default function FirstScreen() {
-  return <Text>First Screen</Text>;
+  return (
+    <View>
+      <Text>First Screen</Text>
+    </View>
+  );
 }
