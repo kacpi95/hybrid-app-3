@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
   },
   phoneNumber: {
     fontSize: 18,
-    color: '#333',
+    color: '#333333',
     marginBottom: 15,
   },
   email: {
     fontSize: 18,
-    color: '#fff',
-    backgroundColor: '#228aebff',
+    color: '#ffffff',
+    backgroundColor: '#228aeb',
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 8,

@@ -7,7 +7,6 @@ import {
   Text,
 } from 'react-native';
 import TipOfTheDay from '../TipOfTheDay';
-import React from 'react';
 
 const { width, height } = Dimensions.get('window');
 
@@ -61,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     paddingHorizontal: 20,
     position: 'absolute',
-    bottom: 20,
+    bottom: 100,
     width: '100%',
   },
   button: {
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#fff',
+    color: '#ffffff',
     fontSize: 16,
     fontWeight: 'bold',
   },

@@ -31,7 +31,7 @@ export default function NoteEditorScreen() {
   const saveNote = async () => {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, note);
-      Alert.alert('Note save');
+      Alert.alert('Success, Note save');
     } catch (err) {
       Alert.alert('Failed to save note');
     }
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    marginBottom: 100,
   },
   input: {
     flex: 1,
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#fff',
+    color: '#ffffff',
     fontSize: 16,
     fontWeight: 'bold',
   },
